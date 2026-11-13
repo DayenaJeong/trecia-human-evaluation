@@ -6,8 +6,8 @@ The evaluation application is intentionally not hosted entirely on GitHub Pages:
 
 ## URL format
 
-- Evaluator: `https://minchi0304.github.io/trecia-human-evaluation/evaluate/#SECURE_TOKEN`
-- Admin: `https://minchi0304.github.io/trecia-human-evaluation/admin/#SECURE_TOKEN`
+- Evaluator: `https://dayenajeong.github.io/trecia-human-evaluation/evaluate/#SECURE_TOKEN`
+- Admin: `https://dayenajeong.github.io/trecia-human-evaluation/admin/#SECURE_TOKEN`
 
 Do not commit real tokens. They are issued and retained by the server-backed platform.
 
