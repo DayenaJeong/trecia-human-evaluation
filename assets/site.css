@@ -1,0 +1,102 @@
+:root {
+  --ink: #152620;
+  --muted: #63726c;
+  --paper: #f6f4ee;
+  --card: #fffef9;
+  --line: #d9ddd7;
+  --green: #176a50;
+  --lime: #d9f27a;
+  --shadow: 0 18px 50px rgba(21, 38, 32, 0.08);
+}
+
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(217, 242, 122, 0.28), transparent 28rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: Inter, Pretendard, "Noto Sans KR", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header, main, footer { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.site-header {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.wordmark { display: flex; align-items: center; gap: 12px; color: inherit; font-weight: 750; text-decoration: none; }
+.mark {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--lime);
+  font-size: 19px;
+}
+.mark.large { width: 48px; height: 48px; margin-bottom: 22px; font-size: 26px; }
+.status { color: var(--muted); font-size: 13px; }
+.status-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: #27a36b; box-shadow: 0 0 0 4px rgba(39, 163, 107, .12); }
+
+.hero { padding: 92px 0 58px; max-width: 930px; }
+.eyebrow { margin: 0 0 17px; color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: .16em; }
+h1, h2, p { margin-top: 0; }
+.hero h1 { margin-bottom: 24px; max-width: 850px; font-size: clamp(42px, 7vw, 78px); line-height: 1.08; letter-spacing: -.055em; }
+.lede { max-width: 730px; color: var(--muted); font-size: 18px; }
+
+.access-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 34px;
+  border: 1px solid rgba(23, 106, 80, .2);
+  border-radius: 20px;
+  background: var(--green);
+  color: white;
+  box-shadow: var(--shadow);
+}
+.access-card h2 { margin-bottom: 8px; font-size: 25px; }
+.access-card p { margin-bottom: 0; color: rgba(255,255,255,.74); }
+.access-card .step { margin-bottom: 8px; color: var(--lime); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.primary-button { flex: none; padding: 14px 18px; border: 0; border-radius: 12px; background: var(--lime); color: var(--ink); font: inherit; font-weight: 800; cursor: pointer; }
+
+.principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 72px 0; }
+.principles article { padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.72); }
+.principles .number { color: var(--green); font-family: ui-monospace, monospace; font-size: 12px; }
+.principles h2 { margin: 31px 0 9px; font-size: 20px; }
+.principles p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+.how-it-works { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; padding: 54px; border-radius: 22px; background: var(--ink); color: white; }
+.how-it-works h2 { font-size: clamp(26px, 4vw, 40px); }
+.how-it-works ol { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.how-it-works li { display: flex; align-items: center; gap: 14px; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+.how-it-works li span { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid rgba(217,242,122,.55); border-radius: 50%; color: var(--lime); font-size: 12px; }
+
+footer { display: flex; justify-content: space-between; gap: 20px; padding: 46px 0 34px; color: var(--muted); font-size: 12px; }
+footer p { margin: 0; }
+
+.handoff-page { min-height: 100vh; display: grid; place-items: center; padding: 22px; }
+.handoff-card { width: min(620px, 100%); padding: 50px; border: 1px solid var(--line); border-radius: 22px; background: var(--card); box-shadow: var(--shadow); }
+.handoff-card h1 { margin-bottom: 12px; font-size: clamp(28px, 5vw, 44px); line-height: 1.14; letter-spacing: -.035em; }
+.handoff-card p:last-child { color: var(--muted); }
+.handoff-error .handoff-card { border-color: #d39b92; }
+
+@media (max-width: 760px) {
+  .site-header { min-height: 70px; }
+  .status { display: none; }
+  .hero { padding: 64px 0 42px; }
+  .hero h1 { font-size: clamp(38px, 13vw, 58px); }
+  .access-card { align-items: flex-start; flex-direction: column; padding: 26px; }
+  .principles { grid-template-columns: 1fr; padding: 48px 0; }
+  .principles h2 { margin-top: 20px; }
+  .how-it-works { grid-template-columns: 1fr; gap: 12px; padding: 28px; }
+  footer { flex-direction: column; }
+  .handoff-card { padding: 34px 26px; }
+}

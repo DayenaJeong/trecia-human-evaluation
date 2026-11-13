@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="description" content="TRECIA change-caption human evaluation access portal">
+    <title>TRECIA Human Evaluation</title>
+    <link rel="stylesheet" href="./assets/site.css">
+    <script defer src="./assets/portal.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="TRECIA Human Evaluation home">
+        <span class="mark" aria-hidden="true">↔</span>
+        <span>TRECIA Human Evaluation</span>
+      </a>
+      <span class="status"><span class="status-dot"></span>Secure evaluation portal</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">CVPR 2027 · CHANGE CAPTION EVALUATION</p>
+        <h1>두 이미지 사이의 변화를<br>독립적으로 평가합니다.</h1>
+        <p class="lede">평가자는 안내받은 개인 링크로 접속해 캡션의 시간 방향, 시각적 내용, 전체 문장 지지 여부를 검토합니다. 응답은 자동 저장되며 나중에 같은 링크에서 이어서 평가할 수 있습니다.</p>
+      </section>
+
+      <section class="access-card" aria-labelledby="access-title">
+        <div>
+          <p class="step">개인 링크를 받은 평가자</p>
+          <h2 id="access-title">평가 링크로 접속해 주세요</h2>
+          <p>고유 링크에는 익명 평가 세션이 포함되어 있습니다. 링크를 다른 사람과 공유하지 마세요.</p>
+        </div>
+        <button class="primary-button" id="resume-button" type="button" hidden>평가 계속하기 <span>→</span></button>
+      </section>
+
+      <section class="principles" aria-label="Evaluation principles">
+        <article>
+          <span class="number">01</span>
+          <h2>Blind review</h2>
+          <p>모델명, 처리 방식, 기존 평가 결과는 평가자에게 표시되지 않습니다.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h2>Persistent progress</h2>
+          <p>각 응답은 서버에 자동 저장되어 새로고침하거나 다른 기기에서도 복원됩니다.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h2>Research privacy</h2>
+          <p>원본 이미지, 연구 매핑, 평가 결과는 공개 GitHub Pages에 저장하지 않습니다.</p>
+        </article>
+      </section>
+
+      <section class="how-it-works">
+        <div>
+          <p class="eyebrow">EVALUATION FLOW</p>
+          <h2>Image 1 → Image 2</h2>
+        </div>
+        <ol>
+          <li><span>1</span>두 이미지를 나란히 확인합니다.</li>
+          <li><span>2</span>제시된 캡션을 Q1–Q3 기준으로 평가합니다.</li>
+          <li><span>3</span>모든 항목을 검토한 뒤 최종 제출합니다.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>TRECIA Human Evaluation · Research use only</p>
+      <p>문제가 있으면 평가를 요청한 연구자에게 문의해 주세요.</p>
+    </footer>
+  </body>
+</html>
